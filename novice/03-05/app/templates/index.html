@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+</head>
+<body>
+
+    <h1>Ini request</h1>
+    <form action="" method="post">
+        <input name="nama" type="text" required>
+        <label for="">nama</label>
+        <input name="detail" type="text" required>
+        <label for="">detail</label>
+        <button type="submit">kirim</button>
+
+    </form>
+
+    <hr>
+    <h1>Ini respons</h1>
+    {{context}}
+    <br>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th colspan="5" bgcolor="yellow">Data Hasil Panen Buah Desa X</th>
+        </tr>
+        <tr>
+            <td rowspan="7">
+                <img src="Pictures/nida.png" width="200" />
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#00ff14">No</td>
+          <td bgcolor="#00ff14">Nama Buah</td>
+          <td bgcolor="#00ff14">Hasil (kg)</td>
+          <td bgcolor="#00ff14">Detail</td>
+        </tr>
+        <tr>
+            <td>1</td>
+          <td>Bengkoang</td>
+          <td>100</td>
+          <td>Manis</td>
+        </tr>
+        <tr>
+            <td>2</td>
+          <td>Mangga</td>
+          <td>50</td>
+          <td>Asam</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Tin</td>
+            <td>30</td>
+            <td>Manis</td>
+        </tr>
+      </table>
+      
+
+    {% for d in context %}
+    <ul>
+        <li>{{d}}</li>
+    </ul>
+    
+    {% endfor %}
+  </div>
+</body>
+</html>
+
+    
