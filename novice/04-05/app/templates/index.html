@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style>
+      table{
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+        border: 1px solid #dddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #dddd;
+      }
+    </style>
+</head>
+<body>
+  <div>
+
+    <h1>Ini request</h1>
+    <form action="" method="post">
+        <input name="nama" type="text" required>
+        <label for="">nama</label>
+        <input name="detail" type="text" required>
+        <label for="">detail</label>
+        <button type="submit">kirim</button>
+
+    </form>
+
+    <hr>
+    <h1>Ini respons</h1>
+    <br>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>actions</th>
+      </tr>
+      {% for d in context %}
+      <tr>
+        <td>{{loop.index}}</td>
+        <td>{{d[1]}}</td>
+        <td>
+          <a href="/detail/{{d[0]}}">
+            <button>detail</button>
+          </a>
+          <a href="/update/{{d[0]}}">
+            <button>update</button>
+          </a>
+          <a href="/delete/{{d[0]}}">
+            <button>delete</button>
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+      <!-- <td bgcolor="#00ff14">nama</td>
+          <td bgcolor="#00ff14">actions</td>
+        </tr>
+        <tr>
+            <td>1</td>
+          <td>Bengkoang</td>
+          <td>Manis</td>
+        </tr>
+        <tr>
+            <td>2</td>
+          <td>Mangga</td>
+          <td>Asam</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Tin</td>
+            <td>30</td>
+            <td>Manis</td>
+        </tr>
+      </table>
+      
+
+    {% for d in context %}
+    <ul>
+        <li>{{d}}</li>
+    </ul> -->
+    
+    <!-- {% endfor %} -->
+  </div>
+</body>
+</html>
+
+    

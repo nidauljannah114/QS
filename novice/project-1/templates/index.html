@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<br /><br />
+<div class="container">
+    <br />
+    <h2 align="center">UMK DIY 2022</h2>
+    <br />
+    <div class="col-md-4" style="margin-left:200px;">
+        <form method="POST">
+        <select name="skills" class="form-control">
+            {% for row in umkjogja %}
+            <option value="{{row.title}}">{{row.title}}</option>
+            {% endfor %}
+        </select>
+        <br /><br />
+        <input type="submit" name="submit" class="btn btn-info" value="Submit" />
+        </form>
+    <br />        
+    </div>
+</div>
+</body>
+</html>
